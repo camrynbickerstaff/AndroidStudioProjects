@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B2DF83"
     tools:context=".MainActivity">
 
     <Button
@@ -16,7 +16,6 @@
         android:layout_marginTop="48dp"
         android:layout_toEndOf="@+id/rascal"
         android:layout_toRightOf="@+id/rascal"
-        android:backgroundTint="#C6A7DD"
         android:text="Abby"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +25,6 @@
         android:layout_width="80dp"
         android:layout_height="64dp"
         android:layout_marginTop="48dp"
-        android:backgroundTint="#8CE2CF"
         android:text="Rascal"
         app:layout_constraintEnd_toStartOf="@+id/both"
         app:layout_constraintHorizontal_bias="0.5"
@@ -40,7 +38,6 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:backgroundTint="#F5EA98"
         android:text="Both Horses"
         android:textIsSelectable="false"
         android:textSize="14sp"
@@ -49,46 +46,48 @@
 
     <ImageView
         android:id="@+id/abbypic"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_above="@+id/rascalpic"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/rascalpic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rascal"
-        app:srcCompat="@mipmap/star" />
+        app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <ImageView
         android:id="@+id/rascalpic"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toTopOf="@+id/bothpic"
+        app:layout_constraintTop_toBottomOf="@+id/abbypic"
+        android:layout_alignParentBottom="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abbypic"
-        app:srcCompat="@mipmap/star" />
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteY="332dp" />
 
     <ImageView
         android:id="@+id/bothpic"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_above="@+id/abbypic"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rascalpic"
         app:layout_constraintVertical_bias="0.5"
-        app:srcCompat="@mipmap/star" />
+        app:srcCompat="@android:drawable/btn_star_big_on" />
 </androidx.constraintlayout.widget.ConstraintLayout>
