@@ -33,6 +33,14 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
+        android:id="@+id/cow4pane"
+        android:layout_width="120dp"
+        android:layout_toLeftOf="@id/button1"
+        android:layout_above="@+id/cow5"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
+    <ImageView
         android:id="@+id/cow5"
         android:layout_above="@+id/cow6"
         android:layout_toLeftOf="@id/button1"
@@ -40,6 +48,14 @@
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
+    <ImageView
+        android:id="@+id/cow5pane"
+        android:layout_width="120dp"
+        android:layout_toLeftOf="@id/button1"
+        android:layout_above="@+id/cow6"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
     <ImageView
         android:id="@+id/cow6"
         android:layout_centerVertical="true"
@@ -49,6 +65,14 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
+        android:id="@+id/cow6pane"
+        android:layout_width="120dp"
+        android:layout_toLeftOf="@id/button1"
+        android:layout_centerVertical="true"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
+    <ImageView
         android:id="@+id/cow7"
         android:layout_below="@+id/cow6"
         android:layout_toLeftOf="@id/button1"
@@ -56,6 +80,14 @@
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
+    <ImageView
+        android:id="@+id/cow7pane"
+        android:layout_width="120dp"
+        android:layout_toLeftOf="@id/button1"
+        android:layout_below="@+id/cow6"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
     <ImageView
         android:id="@+id/cow8"
         android:layout_below="@+id/cow7"
@@ -65,6 +97,14 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
+        android:id="@+id/cow8pane"
+        android:layout_width="120dp"
+        android:layout_toLeftOf="@id/button1"
+        android:layout_below="@+id/cow7"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
+    <ImageView
         android:id="@+id/cow9"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button1"
@@ -72,6 +112,14 @@
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
+    <ImageView
+        android:id="@+id/cow9pane"
+        android:layout_width="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button1"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
     <ImageView
         android:id="@+id/cow10"
         android:layout_toRightOf="@+id/button1"
@@ -81,6 +129,14 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
+        android:id="@+id/cow10pane"
+        android:layout_width="120dp"
+        android:layout_toRightOf="@id/button1"
+        android:layout_below="@+id/cow11"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
+    <ImageView
         android:id="@+id/cow11"
         android:layout_below="@+id/cow12"
         android:layout_toRightOf="@+id/button1"
@@ -88,6 +144,14 @@
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
+    <ImageView
+        android:id="@+id/cow11pane"
+        android:layout_width="120dp"
+        android:layout_toRightOf="@id/button1"
+        android:layout_below="@+id/cow12"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
     <ImageView
         android:id="@+id/cow12"
         android:layout_centerVertical="true"
@@ -97,6 +161,14 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
+        android:id="@+id/cow12pane"
+        android:layout_width="120dp"
+        android:layout_toRightOf="@id/button1"
+        android:layout_centerVertical="true"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
+    <ImageView
         android:id="@+id/cow13"
         android:layout_above="@+id/cow12"
         android:layout_toRightOf="@+id/button1"
@@ -105,6 +177,14 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
+        android:id="@+id/cow13pane"
+        android:layout_width="120dp"
+        android:layout_toRightOf="@id/button1"
+        android:layout_above="@+id/cow12"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
+    <ImageView
         android:id="@+id/cow14"
         android:layout_above="@+id/cow13"
         android:layout_toRightOf="@+id/button1"
@@ -112,6 +192,14 @@
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
+    <ImageView
+        android:id="@+id/cow14pane"
+        android:layout_width="120dp"
+        android:layout_toRightOf="@id/button1"
+        android:layout_above="@+id/cow13"
+        android:layout_height="120dp"
+        android:padding="10dp" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="100dp"
