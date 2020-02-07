@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/nametext"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        android:textSize="30dp"
+        android:layout_alignLeft="@id/output"
+        android:layout_above="@+id/quarters"
+        />
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/output"
+        android:layout_above="@id/quarters"
+        android:maxLines="1"
+        android:padding="30dp"
+        android:inputType="text"
+        />
+    <TextView
+        android:id="@+id/penniestext"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calculate"
+        android:text="Pennies: "
+        android:textSize="30dp"
+        android:layout_alignLeft="@id/output"
+        />
+    <EditText
+        android:id="@+id/pennies"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calculate"
+        android:layout_alignRight="@+id/output"
+        android:padding="30dp"
+        android:digits="0123456789"
+        android:maxLines="1"
+        android:inputType="number"
+        />
+    <TextView
+        android:id="@+id/nickelstext"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Nickels: "
+        android:textSize="30dp"
+        android:layout_alignLeft="@id/output"
+        android:layout_above="@+id/pennies"
+        />
+    <EditText
+        android:id="@+id/nickels"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/output"
+        android:padding="30dp"
+        android:inputType="number"
+        android:layout_above="@+id/pennies"
+        />
+
+    <TextView
+        android:id="@+id/dimestext"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Dimes: "
+        android:textSize="30dp"
+        android:layout_alignLeft="@id/output"
+        android:layout_above="@+id/nickels"
+        />
+    <EditText
+        android:id="@+id/dimes"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/output"
+        android:layout_above="@+id/nickels"
+        android:padding="30dp"
+        android:digits="0123456789"
+        android:maxLines="1"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/quarterstext"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Quarters: "
+        android:textSize="30dp"
+        android:layout_alignLeft="@id/output"
+        android:layout_above="@+id/dimes"
+        />
+    <EditText
+        android:id="@+id/quarters"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/output"
+        android:padding="30dp"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:maxLines="1"
+        android:layout_above="@+id/dimes"
+        />
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/output"
+        android:padding="30dp"
+        android:text="CALCULATE"
+        />
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="300dp"
+        android:layout_height="125dp"
+        android:padding="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+
+        />
+
+</RelativeLayout>
