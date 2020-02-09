@@ -7,10 +7,18 @@ import android.graphics.Color;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView cow13pane;
     ImageView cow14pane;
     ImageView[] cows;
+    int rando1;
 
 
 
@@ -78,43 +87,66 @@ public class MainActivity extends AppCompatActivity {
         cow13pane = findViewById(R.id.cow13pane);
         cow14pane = findViewById(R.id.cow14pane);
 
-
+        cows = new ImageView[12];
+        cows[0] = cow2pane;
+        cows[1] = cow4pane;
+        cows[2] = cow5pane;
+        cows[3] = cow6pane;
+        cows[4] = cow7pane;
+        cows[5] = cow8pane;
+        cows[6] = cow9pane;
+        cows[7] = cow10pane;
+        cows[8] = cow11pane;
+        cows[9] = cow12pane;
+        cows[10] = cow13pane;
+        cows[11] = cow14pane;
         button1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
+
             @Override
             public void onClick(View v) {
-
-                cows = new ImageView[12];
-                cows[0] = cow2pane;
-                cows[1] = cow4pane;
-                cows[2] = cow5pane;
-                cows[3] = cow6pane;
-                cows[4] = cow7pane;
-                cows[5] = cow8pane;
-                cows[6] = cow9pane;
-                cows[7] = cow10pane;
-                cows[8] = cow11pane;
-                cows[9] = cow12pane;
-                cows[10] = cow13pane;
-                cows[11] = cow14pane;
-                int rando1 = 0;
-                int rando2 = 0;
-                for(int i = 0; i < 10; i++)
-                {
-                    rando1 = (int)(Math.random()*(12));
+                rando1 = 0;
+                button1.setClickable(false);
+                for (int i = 0; i < 12; i++) {
+                    cows[i].setBackgroundColor(-65281);
+                    cows[i].getBackground().setAlpha(0);
                 }
+
+                final Runnable flash = new Runnable() {
+                    public void run() {
+                        cows[rando1].setBackgroundColor(-65281);
+                        cows[rando1].getBackground().setAlpha(0);
+                        int rando2 = (int) (Math.random() * (12));
+                        while (rando2 == rando1) {
+                            rando2 = (int) (Math.random() * (12));
+                        }
+                        rando1 = rando2;
+                        cows[rando1].setBackgroundColor(-65281);
+                        cows[rando1].getBackground().setAlpha(50);
+                        Vibrator vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                        vib.vibrate(VibrationEffect.createOneShot(5, 255));
+
+                    }
+                };
+
+                new Timer().scheduleAtFixedRate(new TimerTask() {
+                    int q = 0;
+
+                    @Override
+                    public void run() {
+                        if (q < 20) {
+                            runOnUiThread(flash);
+                            q++;
+                        } else
+
+                            cancel();
+                    }
+
+                }, 0, 200);
 
             }
         });
     }
 
-    void insideLoop(int rando1, int rando2)
-    {
-        cows[rando1].setBackgroundColor(-65281);
-        cows[rando1].getBackground().setAlpha(50);
-        rando2 = rando1;
-        cows[rando2].getBackground().setAlpha(0);
-        android.os.SystemClock.sleep(1000);
-    }
 
 }
