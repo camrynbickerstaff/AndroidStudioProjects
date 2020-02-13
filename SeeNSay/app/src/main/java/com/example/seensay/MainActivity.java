@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rando1 = 0;
-                button1.setClickable(false);
+
                 for (int i = 0; i < 12; i++) {
                     cows[i].setBackgroundColor(-65281);
                     cows[i].getBackground().setAlpha(0);
