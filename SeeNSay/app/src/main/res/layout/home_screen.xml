@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".HomeActivity">
+
+
+    <Button
+        android:id="@+id/farmAnimals"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/numbers"
+        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:padding="30dp"
+
+        />
+    <Button
+        android:id="@+id/numbers"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:padding="30dp"
+
+        />
+    <Button
+        android:id="@+id/forestAnimals"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/numbers"
+        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:padding="30dp"
+
+        />
+</RelativeLayout>

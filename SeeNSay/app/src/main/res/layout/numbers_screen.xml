@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="10dp"
+    tools:context=".NumbersActivity">
 
 
     <ImageView
-        android:id="@+id/cow2"
+        android:id="@+id/number1"
         android:layout_width="120dp"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/button1"
@@ -16,7 +17,7 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow2pane"
+        android:id="@+id/number1pane"
         android:layout_width="120dp"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/button1"
@@ -25,39 +26,39 @@
 
 
     <ImageView
-        android:id="@+id/cow4"
+        android:id="@+id/number2"
         android:layout_toLeftOf="@id/button1"
-        android:layout_above="@+id/cow5"
+        android:layout_above="@+id/number3"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow4pane"
+        android:id="@+id/number2pane"
         android:layout_width="120dp"
         android:layout_toLeftOf="@id/button1"
-        android:layout_above="@+id/cow5"
+        android:layout_above="@+id/number3"
         android:layout_height="120dp"
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow5"
-        android:layout_above="@+id/cow6"
+        android:id="@+id/number3"
+        android:layout_above="@+id/number4"
         android:layout_toLeftOf="@id/button1"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow5pane"
+        android:id="@+id/number3pane"
         android:layout_width="120dp"
         android:layout_toLeftOf="@id/button1"
-        android:layout_above="@+id/cow6"
+        android:layout_above="@+id/number4"
         android:layout_height="120dp"
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow6"
+        android:id="@+id/number4"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@id/button1"
         android:layout_width="120dp"
@@ -65,7 +66,7 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow6pane"
+        android:id="@+id/number4pane"
         android:layout_width="120dp"
         android:layout_toLeftOf="@id/button1"
         android:layout_centerVertical="true"
@@ -73,39 +74,39 @@
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow7"
-        android:layout_below="@+id/cow6"
+        android:id="@+id/number5"
+        android:layout_below="@+id/number4"
         android:layout_toLeftOf="@id/button1"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow7pane"
+        android:id="@+id/number5pane"
         android:layout_width="120dp"
         android:layout_toLeftOf="@id/button1"
-        android:layout_below="@+id/cow6"
+        android:layout_below="@+id/number4"
         android:layout_height="120dp"
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow8"
-        android:layout_below="@+id/cow7"
+        android:id="@+id/number6"
+        android:layout_below="@+id/number5"
         android:layout_toLeftOf="@id/button1"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow8pane"
+        android:id="@+id/number6pane"
         android:layout_width="120dp"
         android:layout_toLeftOf="@id/button1"
-        android:layout_below="@+id/cow7"
+        android:layout_below="@+id/number5"
         android:layout_height="120dp"
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow9"
+        android:id="@+id/number7"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button1"
         android:layout_width="120dp"
@@ -113,7 +114,7 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow9pane"
+        android:id="@+id/number7pane"
         android:layout_width="120dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button1"
@@ -121,39 +122,39 @@
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow10"
+        android:id="@+id/number8"
         android:layout_toRightOf="@+id/button1"
-        android:layout_below="@+id/cow11"
+        android:layout_below="@+id/number9"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow10pane"
+        android:id="@+id/number8pane"
         android:layout_width="120dp"
         android:layout_toRightOf="@id/button1"
-        android:layout_below="@+id/cow11"
+        android:layout_below="@+id/number9"
         android:layout_height="120dp"
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow11"
-        android:layout_below="@+id/cow12"
+        android:id="@+id/number9"
+        android:layout_below="@+id/number10"
         android:layout_toRightOf="@+id/button1"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow11pane"
+        android:id="@+id/number9pane"
         android:layout_width="120dp"
         android:layout_toRightOf="@id/button1"
-        android:layout_below="@+id/cow12"
+        android:layout_below="@+id/number10"
         android:layout_height="120dp"
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow12"
+        android:id="@+id/number10"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/button1"
         android:layout_width="120dp"
@@ -161,7 +162,7 @@
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow12pane"
+        android:id="@+id/number10pane"
         android:layout_width="120dp"
         android:layout_toRightOf="@id/button1"
         android:layout_centerVertical="true"
@@ -169,34 +170,34 @@
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow13"
-        android:layout_above="@+id/cow12"
+        android:id="@+id/number11"
+        android:layout_above="@+id/number10"
         android:layout_toRightOf="@+id/button1"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow13pane"
+        android:id="@+id/number11pane"
         android:layout_width="120dp"
         android:layout_toRightOf="@id/button1"
-        android:layout_above="@+id/cow12"
+        android:layout_above="@+id/number10"
         android:layout_height="120dp"
         android:padding="10dp" />
 
     <ImageView
-        android:id="@+id/cow14"
-        android:layout_above="@+id/cow13"
+        android:id="@+id/number12"
+        android:layout_above="@+id/number11"
         android:layout_toRightOf="@+id/button1"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
-        android:id="@+id/cow14pane"
+        android:id="@+id/number12pane"
         android:layout_width="120dp"
         android:layout_toRightOf="@id/button1"
-        android:layout_above="@+id/cow13"
+        android:layout_above="@+id/number11"
         android:layout_height="120dp"
         android:padding="10dp" />
 
