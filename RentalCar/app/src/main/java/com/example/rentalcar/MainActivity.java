@@ -2,7 +2,11 @@ package com.example.rentalcar;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +14,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
+
+import static android.widget.Toast.LENGTH_LONG;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -26,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     TextView prepaygas;
     TextView insured;
     Button calculate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View v) {
 
                 int cost = 0;
-                int numDrivers;
+                int numDrivers = 1;
                 int[] days = { 1,2,3,4,5,6,7 };
                 int[] vehicle = { 55,85,125 };
                 boolean[] yesorNo = { true,false};
@@ -79,14 +89,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 int vehiclePrice = vehicle[vehicleType_spinner.getSelectedItemPosition()];
                 boolean insured = yesorNo[driverInsured_spinner.getSelectedItemPosition()];
                 boolean gas = yesorNo[gas_spinner.getSelectedItemPosition()];
-                if(numberOfDrivers_input.getText().equals(""))
-                {
-                    return;
+                boolean valid = true;
+                String numDrivers1 = numberOfDrivers_input.getText().toString();
+                try {
+                    numDrivers = Integer.parseInt(numDrivers1);
                 }
-                else {
-                    numDrivers = Integer.parseInt(numberOfDrivers_input.getText().toString());
+                catch(NumberFormatException e) {
+                    valid = false;
                 }
 
+                if( valid ) {
+                    // use the number
+                }
+                else {
+                    // handle invalid entry
+                    return;
+                }
                 cost = cost + vehiclePrice*selectedDays;
                 if(!insured)
                 {
@@ -100,10 +118,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 {
                     cost = cost + 52;
                 }
+
                 System.out.println(cost);
+                Snackbar snackbar = Snackbar.make(findViewById(R.id.thisView), "Total Cost: $" + cost + ".00", Snackbar.LENGTH_LONG);
+                Snackbar.SnackbarLayout layout = (Snackbar.SnackbarLayout)snackbar.getView();
+                layout.setMinimumHeight(300);//your custom height.
+                snackbar.show();
+
+
 
             }
         });
+
     }
 
     @Override
@@ -115,4 +141,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+
 }
