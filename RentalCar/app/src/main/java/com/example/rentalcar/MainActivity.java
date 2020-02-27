@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -123,6 +124,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Snackbar snackbar = Snackbar.make(findViewById(R.id.thisView), "Total Cost: $" + cost + ".00", Snackbar.LENGTH_LONG);
                 Snackbar.SnackbarLayout layout = (Snackbar.SnackbarLayout)snackbar.getView();
                 layout.setMinimumHeight(300);//your custom height.
+                TextView snackbarTextView = snackbar.getView().findViewById(com.google.android.material.R.id.snackbar_text);
+                snackbarTextView.setTextSize( 40 );
+
                 snackbar.show();
 
 
