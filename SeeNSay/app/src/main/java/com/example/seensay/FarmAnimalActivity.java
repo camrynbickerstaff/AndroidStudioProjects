@@ -3,6 +3,7 @@ package com.example.seensay;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -47,6 +48,7 @@ public class FarmAnimalActivity extends AppCompatActivity {
 
 
 
+
     Button button1;
 
     @Override
@@ -82,6 +84,8 @@ public class FarmAnimalActivity extends AppCompatActivity {
         animal11pane = findViewById(R.id.animal12pane);
         animal12pane = findViewById(R.id.animal12pane);
 
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.viewer);
+
         animals = new ImageView[12];
         animals[0] = animal1pane;
         animals[1] = animal2pane;
@@ -95,12 +99,12 @@ public class FarmAnimalActivity extends AppCompatActivity {
         animals[9] = animal10pane;
         animals[10] = animal11pane;
         animals[11] = animal12pane;
+
         button1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
 
             @Override
             public void onClick(View v) {
-                rando1 = 0;
 
                 for (int i = 0; i < 12; i++) {
                     animals[i].setBackgroundColor(-65281);
@@ -116,6 +120,7 @@ public class FarmAnimalActivity extends AppCompatActivity {
                             rando2 = (int) (Math.random() * (12));
                         }
                         rando1 = rando2;
+                       // System.out.println(rando1);
                         animals[rando1].setBackgroundColor(-65281);
                         animals[rando1].getBackground().setAlpha(50);
                         Vibrator vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
@@ -138,6 +143,16 @@ public class FarmAnimalActivity extends AppCompatActivity {
                     }
 
                 }, 0, 200);
+                System.out.println(rando1);
+
+                for (int i = 0; i < 12; i++) {
+                    if(animals[i].getSolidColor() == -65281)
+                        rando1 =i;
+                    else
+                        System.out.println("NO");
+                }
+                System.out.println(rando1);
+
 
             }
         });
