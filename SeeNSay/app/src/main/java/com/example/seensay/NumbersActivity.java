@@ -1,9 +1,9 @@
 package com.example.seensay;
 
-
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
@@ -11,7 +11,6 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -42,10 +41,22 @@ public class NumbersActivity extends AppCompatActivity {
     ImageView number11pane;
     ImageView number12pane;
     ImageView[] numbers;
+
+    private MediaPlayer mMediaPlayer1;
+    private MediaPlayer mMediaPlayer2;
+    private MediaPlayer mMediaPlayer3;
+    private MediaPlayer mMediaPlayer4;
+    private MediaPlayer mMediaPlayer5;
+    private MediaPlayer mMediaPlayer6;
+    private MediaPlayer mMediaPlayer7;
+    private MediaPlayer mMediaPlayer8;
+    private MediaPlayer mMediaPlayer9;
+    private MediaPlayer mMediaPlayer10;
+    private MediaPlayer mMediaPlayer11;
+    private MediaPlayer mMediaPlayer12;
+
     int rando1;
-
-
-
+    public int x;
 
     Button button1;
 
@@ -53,6 +64,22 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.numbers_screen);
+
+
+        // for the audio files
+        mMediaPlayer1 = MediaPlayer.create(this, R.raw.one);
+        mMediaPlayer2 = MediaPlayer.create(this, R.raw.two);
+        mMediaPlayer3 = MediaPlayer.create(this, R.raw.three);
+        mMediaPlayer4 = MediaPlayer.create(this, R.raw.four);
+        mMediaPlayer5 = MediaPlayer.create(this, R.raw.five);
+        mMediaPlayer6 = MediaPlayer.create(this, R.raw.six);
+        mMediaPlayer7 = MediaPlayer.create(this, R.raw.seven);
+        mMediaPlayer8 = MediaPlayer.create(this, R.raw.eight);
+        mMediaPlayer9 = MediaPlayer.create(this, R.raw.nine);
+        mMediaPlayer10 = MediaPlayer.create(this, R.raw.ten);
+        mMediaPlayer11 = MediaPlayer.create(this, R.raw.eleven);
+        mMediaPlayer12 = MediaPlayer.create(this, R.raw.twelve);
+
 
         number1 = findViewById(R.id.number1);
         number2 = findViewById(R.id.number2);
@@ -95,16 +122,20 @@ public class NumbersActivity extends AppCompatActivity {
         numbers[9] = number10pane;
         numbers[10] = number11pane;
         numbers[11] = number12pane;
+
+
         button1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
 
             @Override
             public void onClick(View v) {
+
                 rando1 = 0;
 
                 for (int i = 0; i < 12; i++) {
                     numbers[i].setBackgroundColor(-65281);
                     numbers[i].getBackground().setAlpha(0);
+
                 }
 
                 final Runnable flash = new Runnable() {
@@ -114,6 +145,7 @@ public class NumbersActivity extends AppCompatActivity {
                         int rando2 = (int) (Math.random() * (12));
                         while (rando2 == rando1) {
                             rando2 = (int) (Math.random() * (12));
+
                         }
                         rando1 = rando2;
                         numbers[rando1].setBackgroundColor(-65281);
@@ -121,6 +153,7 @@ public class NumbersActivity extends AppCompatActivity {
                         Vibrator vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
                         vib.vibrate(VibrationEffect.createOneShot(5, 255));
 
+                        x = rando1;  // to use for which number to say and explode
                     }
                 };
 
@@ -129,19 +162,100 @@ public class NumbersActivity extends AppCompatActivity {
 
                     @Override
                     public void run() {
+                       // once the random flash is done say and explode the final number
                         if (q < 20) {
                             runOnUiThread(flash);
                             q++;
-                        } else
+                        }
+                        else {
+                            //BUTTON CLICKABLE AGAIN
+                            if (x == 0)
+                            {
+                                mMediaPlayer1.start();
+                                openActivity2(0);
+                            }
+                            else if (x == 1)
+                            {
+                                mMediaPlayer2.start();
+                                openActivity2(1);
+                            }
+                            else if(x == 2)
+                            {
+                                mMediaPlayer3.start();
+                                openActivity2(2);
+                            }
+                            else if (x == 3)
+                            {
+                                mMediaPlayer4.start();
+                                openActivity2(3);
+                            }
+                            else if (x == 4)
+                            {
+                                mMediaPlayer5.start();
+                                openActivity2(4);
+                            }
+                            else if (x == 5)
+                            {
+                                mMediaPlayer6.start();
+                                openActivity2(5);
+                            }
+                            else if (x == 6)
+                            {
+                                mMediaPlayer7.start();
+                                openActivity2(6);
+                            }
+                            else if (x == 7)
+                            {
+                                mMediaPlayer8.start();
+                                openActivity2(7);
+                            }
+                            else if (x == 8)
+                            {
+                                mMediaPlayer9.start();
+                                openActivity2(8);
+                            }
+                            else if (x == 9)
+                            {
+                                mMediaPlayer10.start();
+                                openActivity2(9);
+                            }
+                            else if (x == 10)
+                            {
+                                mMediaPlayer12.start();
+                                openActivity2(11);
+                            }
+                            else if (x == 11)
+                            {
+                                mMediaPlayer12.start();
+                                openActivity2(11);
+                            }
 
                             cancel();
+                        }
+
                     }
 
                 }, 0, 200);
-
             }
         });
     }
 
+    // explodes the number that is landed on last
+    public void openActivity2(int x){
+        Intent intent;
+        if (x == 0) intent = new Intent(this, oneexplode.class);
+        else if (x == 1) intent = new Intent(this, twoexplode.class);
+        else if (x == 2) intent = new Intent(this, threeexplode.class);
+        else if (x == 3) intent = new Intent(this, fourexplode.class);
+        else if (x == 4) intent = new Intent(this, fiveexplode.class);
+        else if (x == 5) intent = new Intent(this, sixexplode.class);
+        else if (x == 6) intent = new Intent(this, sevenexplode.class);
+        else if (x == 7) intent = new Intent(this, eightexplode.class);
+        else if (x == 8) intent = new Intent(this, nineexplode.class);
+        else if (x == 9) intent = new Intent(this, tenexplode.class);
+        else if (x == 10) intent = new Intent(this, twelveexplode.class);
+        else intent = new Intent(this, twelveexplode.class);
 
+        startActivity(intent);
+    }
 }

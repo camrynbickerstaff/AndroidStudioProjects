@@ -18,15 +18,16 @@
         android:padding="30dp"
 
         />
+
     <Button
         android:id="@+id/numbers"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_height="200dp"
         android:layout_width="300dp"
-        android:padding="30dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:foreground="@mipmap/numbers"
 
-        />
+        android:padding="30dp"
+        android:src="@mipmap/numbers" />
     <Button
         android:id="@+id/forestAnimals"
         android:layout_centerHorizontal="true"

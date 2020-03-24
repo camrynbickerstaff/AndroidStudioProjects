@@ -11,6 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".twelveexplode"></activity>
+        <activity android:name=".elevenexplode" />
+        <activity android:name=".tenexplode" />
+        <activity android:name=".nineexplode" />
+        <activity android:name=".eightexplode" />
+        <activity android:name=".sevenexplode" />
+        <activity android:name=".sixexplode" />
+        <activity android:name=".fiveexplode" />
+        <activity android:name=".fourexplode" />
+        <activity android:name=".threeexplode" />
+        <activity android:name=".twoexplode" />
+        <activity android:name=".oneexplode" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
