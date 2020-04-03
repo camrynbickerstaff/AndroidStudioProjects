@@ -1,0 +1,2 @@
+rootProject.name='FlagsOfStates'
+include ':app'

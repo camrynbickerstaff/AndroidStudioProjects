@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/hint"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"
+
+        />
+    <ImageView
+        android:id="@+id/statePic"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+
+
+    <Button
+        android:id="@+id/option1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/statePic"
+        android:layout_margin="5dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/option2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/option1"
+        android:layout_margin="5dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/option3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/option2"
+        android:layout_margin="5dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/option4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/option3"
+        android:layout_margin="5dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/option5"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/option4"
+        android:layout_margin="5dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        android:text="Play" />
+
+    <ImageView
+        android:id="@+id/correct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+
+</RelativeLayout>
