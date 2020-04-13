@@ -11,7 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".twelveexplode"></activity>
+        <activity android:name=".elephantactivity"></activity>
+        <activity android:name=".zebraactivity" />
+        <activity android:name=".snakeactivity" />
+        <activity android:name=".rhinoactivity" />
+        <activity android:name=".lionactivity" />
+        <activity android:name=".leopardactivity" />
+        <activity android:name=".hyenaactivity" />
+        <activity android:name=".hippoactivity" />
+        <activity android:name=".crocodileactivity" />
+        <activity android:name=".buffaloactivity" />
+        <activity android:name=".birdactivity" />
+        <activity android:name=".baboonactivity" />
+        <activity android:name=".twelveexplode" />
         <activity android:name=".elevenexplode" />
         <activity android:name=".tenexplode" />
         <activity android:name=".nineexplode" />
@@ -23,6 +35,18 @@
         <activity android:name=".threeexplode" />
         <activity android:name=".twoexplode" />
         <activity android:name=".oneexplode" />
+        <activity android:name=".catactivity" />
+        <activity android:name=".cowactivity" />
+        <activity android:name=".duckactivity" />
+        <activity android:name=".dogactivity" />
+        <activity android:name=".donkeyacticity" />
+        <activity android:name=".wildmikeactivity" />
+        <activity android:name=".pigactivity" />
+        <activity android:name=".goatactivity" />
+        <activity android:name=".horseactivity" />
+        <activity android:name=".sheepactivity" />
+        <activity android:name=".turkeyactivity" />
+        <activity android:name=".chickenactivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +56,7 @@
         </activity>
         <activity android:name=".FarmAnimalActivity" />
         <activity android:name=".NumbersActivity" />
-        <activity android:name=".ForestAnimalsActivity" />
+        <activity android:name=".WildlifeActivity" />
     </application>
 
 </manifest>

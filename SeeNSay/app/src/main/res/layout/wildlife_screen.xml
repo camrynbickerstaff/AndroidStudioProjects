@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WildlifeActivity">
+
+
+    <ImageView
+        android:id="@+id/animal1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/animal2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-50dp"
+        android:padding="10dp"
+        android:src="@mipmap/baboon" />
+
+    <ImageView
+        android:id="@+id/animal1pane"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/animal2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-50dp"
+        android:padding="10dp" />
+
+
+    <ImageView
+        android:id="@+id/animal2"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/animal3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/bird" />
+    <ImageView
+        android:id="@+id/animal2pane"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/animal3"
+        android:layout_height="100dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal3"
+        android:layout_above="@+id/animal4"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/buffalo" />
+    <ImageView
+        android:id="@+id/animal3pane"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/animal4"
+        android:layout_height="100dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal4"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/crocodile" />
+    <ImageView
+        android:id="@+id/animal4pane"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"
+        android:layout_height="100dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal5"
+        android:layout_below="@+id/animal4"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/elephant" />
+    <ImageView
+        android:id="@+id/animal5pane"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/animal4"
+        android:layout_height="100dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal6"
+        android:layout_below="@+id/animal5"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/hippo" />
+
+    <ImageView
+        android:id="@+id/animal6pane"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/animal5"
+        android:layout_marginTop="-1dp"
+        android:layout_marginRight="21dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/animal6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        android:padding="10dp"
+        android:src="@mipmap/hyena" />
+
+    <ImageView
+        android:id="@+id/animal7pane"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/animal6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal8"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/animal9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/leopard" />
+
+    <ImageView
+        android:id="@+id/animal8pane"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/animal9"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/animal1"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal9"
+        android:layout_below="@+id/animal10"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/lion" />
+    <ImageView
+        android:id="@+id/animal9pane"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/animal10"
+        android:layout_height="100dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal10"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/rhino" />
+    <ImageView
+        android:id="@+id/animal10pane"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"
+        android:layout_height="100dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal11"
+        android:layout_above="@+id/animal10"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/snake" />
+    <ImageView
+        android:id="@+id/animal11pane"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_above="@+id/animal10"
+        android:layout_height="100dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/animal12"
+        android:layout_above="@+id/animal11"
+        android:layout_toRightOf="@+id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@mipmap/zebra" />
+    <ImageView
+        android:id="@+id/animal12pane"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_above="@+id/animal11"
+        android:layout_height="100dp"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/backtostart"
+        android:backgroundTint="#7743A1"
+        android:text="Tap"
+        android:textColor="#FFF"/>
+
+    <ImageView
+        android:id="@+id/spinner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/spinner" />
+
+
+</RelativeLayout>
+
+
+

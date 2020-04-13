@@ -1,16 +1,21 @@
 package com.example.seensay;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.view.View;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -42,6 +47,8 @@ public class NumbersActivity extends AppCompatActivity {
     ImageView number12pane;
     ImageView[] numbers;
 
+    ImageView spinner;
+
     private MediaPlayer mMediaPlayer1;
     private MediaPlayer mMediaPlayer2;
     private MediaPlayer mMediaPlayer3;
@@ -60,10 +67,12 @@ public class NumbersActivity extends AppCompatActivity {
 
     Button button1;
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.numbers_screen);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
         // for the audio files
@@ -95,6 +104,8 @@ public class NumbersActivity extends AppCompatActivity {
         number12 = findViewById(R.id.number12);
 
         button1 = findViewById(R.id.button1);
+        spinner = findViewById(R.id.spinner);
+        spinner.setVisibility(View.INVISIBLE);
 
         number1pane = findViewById(R.id.number1pane);
         number2pane = findViewById(R.id.number2pane);
@@ -129,8 +140,15 @@ public class NumbersActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                button1.setEnabled(false);
                 rando1 = 0;
+                button1.setVisibility(View.INVISIBLE);
+                spinner.setVisibility(View.VISIBLE);
+                RotateAnimation roA = new RotateAnimation(0, 720,
+                        RotateAnimation.RELATIVE_TO_SELF, .5f,
+                        RotateAnimation.RELATIVE_TO_SELF, .5f);
+                roA.setDuration(4300);
+                spinner.startAnimation(roA);
 
                 for (int i = 0; i < 12; i++) {
                     numbers[i].setBackgroundColor(-65281);
@@ -257,5 +275,6 @@ public class NumbersActivity extends AppCompatActivity {
         else intent = new Intent(this, twelveexplode.class);
 
         startActivity(intent);
+        finish();
     }
 }

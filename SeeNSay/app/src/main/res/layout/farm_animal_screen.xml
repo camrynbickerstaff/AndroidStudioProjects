@@ -4,209 +4,250 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     tools:context=".FarmAnimalActivity">
 
 
     <ImageView
         android:id="@+id/animal1"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/animal2"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/button1"
-        android:layout_height="120dp"
+        android:layout_marginBottom="-50dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/chicken" />
+
     <ImageView
         android:id="@+id/animal1pane"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/animal2"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/button1"
-        android:layout_height="120dp"
+        android:layout_marginBottom="-50dp"
         android:padding="10dp" />
 
 
     <ImageView
         android:id="@+id/animal2"
-        android:layout_toLeftOf="@id/button1"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
         android:layout_above="@+id/animal3"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/dog" />
     <ImageView
         android:id="@+id/animal2pane"
-        android:layout_width="120dp"
-        android:layout_toLeftOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
         android:layout_above="@+id/animal3"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal3"
         android:layout_above="@+id/animal4"
-        android:layout_toLeftOf="@id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/cat" />
     <ImageView
         android:id="@+id/animal3pane"
-        android:layout_width="120dp"
-        android:layout_toLeftOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
         android:layout_above="@+id/animal4"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal4"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
         android:src="@mipmap/cow" />
     <ImageView
         android:id="@+id/animal4pane"
-        android:layout_width="120dp"
-        android:layout_toLeftOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
         android:layout_centerVertical="true"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal5"
         android:layout_below="@+id/animal4"
-        android:layout_toLeftOf="@id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/pig" />
     <ImageView
         android:id="@+id/animal5pane"
-        android:layout_width="120dp"
-        android:layout_toLeftOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
         android:layout_below="@+id/animal4"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal6"
         android:layout_below="@+id/animal5"
-        android:layout_toLeftOf="@id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_toLeftOf="@id/animal1"
+        android:layout_marginRight="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/llama" />
+
     <ImageView
         android:id="@+id/animal6pane"
-        android:layout_width="120dp"
-        android:layout_toLeftOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/animal5"
-        android:layout_height="120dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginRight="21dp"
+        android:layout_toLeftOf="@id/animal1"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/animal6"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_marginTop="-50dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/goat" />
+
     <ImageView
         android:id="@+id/animal7pane"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/animal6"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/button1"
-        android:layout_height="120dp"
+        android:layout_marginTop="-50dp"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal8"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
         android:layout_below="@+id/animal9"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/sheep" />
+
     <ImageView
         android:id="@+id/animal8pane"
-        android:layout_width="120dp"
-        android:layout_toRightOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/animal9"
-        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/animal1"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal9"
         android:layout_below="@+id/animal10"
-        android:layout_toRightOf="@+id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/duck" />
     <ImageView
         android:id="@+id/animal9pane"
-        android:layout_width="120dp"
-        android:layout_toRightOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
         android:layout_below="@+id/animal10"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal10"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/horse" />
     <ImageView
         android:id="@+id/animal10pane"
-        android:layout_width="120dp"
-        android:layout_toRightOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
         android:layout_centerVertical="true"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal11"
         android:layout_above="@+id/animal10"
-        android:layout_toRightOf="@+id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/turkey" />
     <ImageView
         android:id="@+id/animal11pane"
-        android:layout_width="120dp"
-        android:layout_toRightOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
         android:layout_above="@+id/animal10"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:padding="10dp" />
 
     <ImageView
         android:id="@+id/animal12"
         android:layout_above="@+id/animal11"
-        android:layout_toRightOf="@+id/button1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_toRightOf="@+id/animal1"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:src="@mipmap/cow" />
+        android:src="@mipmap/donkey" />
     <ImageView
         android:id="@+id/animal12pane"
-        android:layout_width="120dp"
-        android:layout_toRightOf="@id/button1"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/animal1"
+        android:layout_marginLeft="20dp"
         android:layout_above="@+id/animal11"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:padding="10dp" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="100dp"
-        android:layout_height="490dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:background="@drawable/backtostart"
+        android:backgroundTint="#7743A1"
+        android:text="Tap"
+        android:textColor="#FFF"/>
+
+    <ImageView
+        android:id="@+id/spinner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/spinner" />
+
 
 
 

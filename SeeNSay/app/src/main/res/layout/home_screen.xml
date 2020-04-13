@@ -8,33 +8,46 @@
     android:padding="10dp"
     tools:context=".HomeActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Tap to Play!"
+        android:textColor="#5EDC9B"
+        android:textSize="25dp"
+        app:fontFamily="@font/amaranth" />
 
     <Button
         android:id="@+id/farmAnimals"
         android:layout_centerHorizontal="true"
-        android:layout_above="@id/numbers"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_width="300dp"
-        android:padding="30dp"
-
+        android:layout_below="@id/textView"
+        android:layout_marginTop="20dp"
+        android:foreground="@mipmap/farmanimals"
         />
 
     <Button
         android:id="@+id/numbers"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:foreground="@mipmap/numbers"
-
-        android:padding="30dp"
-        android:src="@mipmap/numbers" />
-    <Button
-        android:id="@+id/forestAnimals"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/numbers"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_width="300dp"
-        android:padding="30dp"
+        android:layout_below="@id/farmAnimals"
+        android:layout_marginTop="25dp"
+        android:foreground="@mipmap/numberspicture"
+        />
+    <Button
+        android:id="@+id/wildAnimals"
+        android:layout_centerHorizontal="true"
+        android:layout_height="150dp"
+        android:layout_width="300dp"
+        android:layout_below="@id/numbers"
+        android:layout_marginTop="25dp"
+        android:foreground="@mipmap/wildllif"
 
         />
+
 </RelativeLayout>
