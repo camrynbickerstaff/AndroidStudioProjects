@@ -39,7 +39,7 @@ public class chickenactivity extends AppCompatActivity {
 
     }
     public void openActivity1(){
-        Intent intent = new Intent(this, WildlifeActivity.class);
+        Intent intent = new Intent(this, FarmAnimalActivity.class);
         startActivity(intent);
         finish();
     }
